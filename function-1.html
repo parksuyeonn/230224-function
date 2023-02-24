@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let rubin = 1; //메모리를 확보했다
+    console.log(rubin); //조회했다
+    rubin = "바보"; //재할당
+    console.log(rubin); //업데이트
+
+    function  valueChange(a, b, c){ //만들어놓긴 하는데 부를때까지는 그대로 //불변// 리터럴 // 변수를 만들지 않으면 변경이 불가능하다. {}스코프 = 영역, 불변
+      if(typeof(a) === "string"){
+        if(typeof(b) === "string"){
+          if(typeof(c) === "string"){
+            return a + b + c; //돌려줄것
+          }
+        }
+      }
+    }
+    rubin = valueChange(1,2,3); //할당
+    console.log(rubin);
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1></h1>
+    <h2></h2>
+  </div>
+  <script>
+    let root = document.getElementById('root'); //id는 객체반환
+
+    // function percentCalculator(realValue, totalValue){
+    //   let result = (realValue / totalValue) *100;
+    //   return result + "%"; //"" 문자열
+    // }
+    // //총 100점에서 20점은 몇 퍼센트?
+    // console.log(percentCalculator(20,100)); //20
+    // root.children[0].innerHTML = percentCalculator(20,100);
+    // root.children[1].innerHTML = percentCalculator(44,36790);
+
+
+    // function minusCalculator(a, b){
+    //   let result = a-b;
+    //   return result;
+    // }
+    // //마이너스
+    // console.log(minusCalculator(100,20)); 
+    // root.children[0].innerHTML = minusCalculator(200,56);
+    // root.children[1].innerHTML = minusCalculator(10,8);
+
+    console.log(root.children[0])
+
+    function plusCalculator(a, b){
+      let result = a+b;
+      return result;
+    }
+    //console.log(plusCalculator(100,20)); 
+    root.children[0].innerHTML = plusCalculator(200,56);
+    root.children[1].innerHTML = plusCalculator(10,8);
+
+    console.dir(root.children[0].innerHTML)
+
+    for(let index = 0; index <root.children.length; index++){
+      if(root.children[index].innerHTML > 100){
+        root.children[index].style.color = "red";
+      } else{
+        root.children[index].style.color = "blue";
+      }
+    }
+    
+
+  </script>
+  
+</body>
+</html>
