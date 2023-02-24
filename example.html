@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1></h1>
+  </div>
+  <script>
+    let root = document.getElementById('root');
+    
+    function percentCalculatorReturnString(realValue, totalValue){
+      let result = (realValue / totalValue) * 100;
+      return result + "%";
+    }
+
+    let h1Tag = document.createElement('h1'); 
+    //메서드는 지정한 tagName의 HTML 요소를 만들어 반환합니다.
+    h1Tag.setAttribute('id','title');
+    //선택한 요소(element)의 속성(attribute) 값을 정합니다.
+    h1Tag.textContent = percentCalculatorReturnString(26,305);
+    root.appendChild(h1Tag);
+  </script>
+</body>
+</html>
